@@ -1,0 +1,210 @@
+/* ===== CONTACTS — POLISHED ===== */
+
+/* Grid */
+.kl-contact-page .kl-contact-grid {
+  display: grid;
+  gap: 18px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  align-items: stretch;
+}
+
+/* Cards */
+.kl-contact-page .kl-card {
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  border: 1px solid #e8edf3;
+  border-radius: 16px;
+  padding: 18px;
+  box-shadow: 0 8px 24px rgba(17, 24, 39, 0.06);
+  position: relative;
+  isolation: isolate;
+}
+.kl-contact-page .kl-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 16px;
+  pointer-events: none;
+  background: linear-gradient(180deg, rgba(44, 95, 45, 0.06), transparent 40%);
+  mix-blend-mode: multiply;
+  opacity: 0.6;
+}
+.kl-contact-page h3 {
+  margin: 0 0 10px;
+  font-size: 1.12rem;
+  line-height: 1.25;
+  color: #111827;
+  letter-spacing: 0.2px;
+}
+
+/* Body text */
+.kl-contact-page .kl-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  color: #374151;
+  font-size: 15.5px;
+}
+.kl-contact-page .kl-list li {
+  padding: 7px 0;
+  line-height: 1.55;
+}
+.kl-contact-page a {
+  color: #1f2937;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+.kl-contact-page a:hover {
+  color: #2c5f2d;
+}
+
+/* Main CTA */
+.kl-contact-page .btn-cta {
+  display: inline-block;
+  background: #f3c04d;
+  color: #1f2937;
+  border-radius: 999px;
+  padding: 12px 18px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  text-decoration: none;
+  transition:
+    transform 0.06s ease,
+    filter 0.15s ease;
+}
+.kl-contact-page .btn-cta:hover {
+  filter: brightness(0.98);
+}
+.kl-contact-page .btn-cta:active {
+  transform: translateY(1px);
+}
+
+/* Secondary buttons (WhatsApp/Telegram/Email/IG) */
+.kl-contacts-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 10px 0 2px;
+}
+.kl-contacts-buttons .btn-pill {
+  display: inline-block;
+  background: #f6f7f9;
+  border: 1px solid #e8edf3;
+  border-radius: 999px;
+  padding: 9px 14px;
+  text-decoration: none;
+  color: #1f2937;
+  font-weight: 700;
+  font-size: 0.95rem;
+  transition:
+    background 0.15s ease,
+    transform 0.06s ease,
+    box-shadow 0.15s ease;
+}
+.kl-contacts-buttons .btn-pill:hover {
+  background: #fff;
+  box-shadow: 0 6px 16px rgba(17, 24, 39, 0.08);
+}
+.kl-contacts-buttons .btn-pill:active {
+  transform: translateY(1px);
+}
+
+/* Hours table → neat pills */
+.kl-hours table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 8px;
+  font-size: 15.5px;
+}
+.kl-hours th {
+  text-align: left;
+  color: #6b7280;
+  font-weight: 700;
+  width: 72px;
+  padding-right: 6px;
+}
+.kl-hours td {
+  background: #f8fafb;
+  border: 1px solid #e8edf3;
+  border-radius: 12px;
+  padding: 9px 12px;
+  color: #1f2937;
+  box-shadow: inset 0 0 0 2px rgba(44, 95, 45, 0.04);
+}
+
+/* Map */
+.kl-map-embed iframe {
+  width: 100%;
+  height: 340px;
+  border: 0;
+  border-radius: 14px;
+  box-shadow: 0 12px 26px rgba(17, 24, 39, 0.1);
+}
+
+/* Section spacing harmonized with theme */
+.home-section .home-section__title {
+  margin-bottom: 6px;
+}
+.kl-contact-page .kl-actions {
+  margin-top: 12px;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+/* Responsive tweaks */
+@media (max-width: 960px) {
+  .kl-hours th {
+    width: 60px;
+  }
+}
+@media (max-width: 640px) {
+  .kl-contact-page .kl-card {
+    padding: 16px;
+  }
+  .kl-hours td {
+    padding: 8px 10px;
+  }
+}
+
+/* Optional: subtle focus ring for accessibility */
+.kl-contact-page :where(a, button).btn-pill:focus-visible,
+.kl-contact-page .btn-cta:focus-visible {
+  outline: 3px solid rgba(44, 95, 45, 0.35);
+  outline-offset: 2px;
+  border-radius: 999px;
+}
+
+/* ===== CONTACT GRID ===== */
+.kl-contact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  align-items: start;
+}
+
+/* ===== WIDE CARD (map) ===== */
+@media (min-width: 768px) {
+  .kl-card--wide {
+    grid-column: span 2;
+  }
+}
+
+.kl-card {
+  background: #fff;
+  border-radius: 14px;
+  padding: 2rem;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
+}
+
+/* ===== MAP EMBED ===== */
+.kl-map-embed iframe {
+  width: 100%;
+  height: 400px;
+  border: 0;
+  border-radius: 14px;
+  box-shadow: 0 10px 25px rgba(17, 24, 39, 0.08);
+}
