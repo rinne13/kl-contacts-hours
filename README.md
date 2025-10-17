@@ -3,6 +3,7 @@
 ## Contacts & Hours 
 
 Contributors: rinne13
+
 Tags: contacts, hours, opening hours, business info, widget  
 Requires at least: 5.8  
 Tested up to: 6.6  
@@ -24,9 +25,9 @@ It’s lightweight, fully customizable through the WordPress dashboard, and idea
 3. Go to *Settings → Contacts & Hours* to add your information.  
 4. Use the shortcode `[contacts_hours]` to display it on any page.
 
-== Changelog ==
-= 1.0.0 =
+## Changelog 
+* 1.0.0 
 * Initial release.
 
-== License ==
+## License 
 This plugin is licensed under the GPLv2 or later.
